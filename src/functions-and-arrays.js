@@ -1,3 +1,4 @@
+// Solved by Antonio Monreal Diaz
 // Iteration #1: Find the maximum
 function maxOfTwoNumbers(n1,n2) {
   if (n1 >= n2) {
