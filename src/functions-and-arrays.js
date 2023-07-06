@@ -15,9 +15,7 @@ const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard',
 
 function findLongestWord(words) {
   let ans = ""
-  if (words.length < 1) {
-    return null
-  }
+  if (words.length < 1) return null
   for (let i = 0; i < words.length; i++) {
     if (words[i].length > ans.length) {
       ans = words[i]
@@ -33,9 +31,7 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(numbers) {
   let ans = 0
-  if (numbers.length < 1) {
-    return 0
-  }
+  if (numbers.length < 1) return 0
   for (let i = 0; i < numbers.length; i++) {
     ans += numbers[i]
   }
@@ -49,9 +45,7 @@ const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
 
 function sum(mixedArr) {
   let ans = 0
-  if (mixedArr.length < 1) {
-    return 0
-  }
+  if (mixedArr.length < 1) return 0
   for (let i = 0; i < mixedArr.length; i++) {
     if (typeof mixedArr[i] == "object") {
       throw new Error("Unsupported data type sir or ma'am")
@@ -69,9 +63,7 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbersAvg) {
   let avg = 0
-  if (numbersAvg.length < 1) {
-    return null
-  }
+  if (numbersAvg.length < 1) return null
   for (let i = 0; i < numbersAvg.length; i++) {
     avg += numbersAvg[i]
   }
@@ -85,9 +77,7 @@ const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smar
 
 function averageWordLength(wordsArr) {
   let avg = 0
-  if (wordsArr.length < 1) {
-    return null
-  }
+  if (wordsArr.length < 1) return null
   for (let i = 0; i < wordsArr.length; i++) {
     avg += wordsArr[i].length
   }
@@ -98,9 +88,7 @@ function averageWordLength(wordsArr) {
 // Bonus - Iteration #4.1
 function avg(mixedArr) {
   let avg = 0
-  if (mixedArr.length < 1) {
-    return null
-  }
+  if (mixedArr.length < 1) return null
   for (let i = 0; i < mixedArr.length; i++) {
     typeof mixedArr[i] == "string" ? avg += mixedArr[i].length : avg += mixedArr[i]
     /* if (typeof mixedArr[i] == "string") {
@@ -130,9 +118,7 @@ const wordsUnique = [
 
 function uniquifyArray(wordsUnique) {
   const uniques = {}
-  if (wordsUnique.length < 1) {
-    return null
-  }
+  if (wordsUnique.length < 1) return null
   for (let i = 0; i < wordsUnique.length; i++) {
     if (!uniques.hasOwnProperty(wordsUnique[i])) {
       uniques[wordsUnique[i]] = true
@@ -147,7 +133,9 @@ function uniquifyArray(wordsUnique) {
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
 function doesWordExist(wordsFind,word) {
-  const finds = {}
+  if (wordsFind.length < 1) return null
+  return wordsFind.includes(word)
+  /* const finds = {}
   if (wordsFind.length < 1) {
     return null
   }
@@ -158,7 +146,7 @@ function doesWordExist(wordsFind,word) {
     return true
   } else {
     return false
-  }
+  } */
 }
 
 
@@ -179,17 +167,13 @@ const wordsCount = [
 ];
 
 function howManyTimes(wordsCount,word) {
-  if (wordsCount.length === 0) {
-    return 0;
-  }
-
+  if (wordsCount.length < 1) return 0
   let count = 0;
   for (let i = 0; i < wordsCount.length; i++) {
     if (wordsCount[i] === word) {
       count++;
     }
   }
-
   return count;
 }
 
