@@ -68,15 +68,14 @@ function sum(mixedArr) {
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(numbersAvg) {
-  let aux = 0
   let avg = 0
   if (numbersAvg.length < 1) {
     return null
   }
   for (let i = 0; i < numbersAvg.length; i++) {
-    aux += numbersAvg[i]
+    avg += numbersAvg[i]
   }
-  avg = aux / numbersAvg.length
+  avg /= numbersAvg.length
   return avg
 }
 
@@ -85,34 +84,32 @@ function averageNumbers(numbersAvg) {
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(wordsArr) {
-  let aux = 0
   let avg = 0
   if (wordsArr.length < 1) {
     return null
   }
   for (let i = 0; i < wordsArr.length; i++) {
-    aux += wordsArr[i].length
+    avg += wordsArr[i].length
   }
-  avg = aux / wordsArr.length
+  avg /= wordsArr.length
   return avg
 }
 
 // Bonus - Iteration #4.1
 function avg(mixedArr) {
-  let aux = 0
   let avg = 0
   if (mixedArr.length < 1) {
     return null
   }
   for (let i = 0; i < mixedArr.length; i++) {
-    typeof mixedArr[i] == "string" ? aux += mixedArr[i].length : aux += mixedArr[i]
+    typeof mixedArr[i] == "string" ? avg += mixedArr[i].length : avg += mixedArr[i]
     /* if (typeof mixedArr[i] == "string") {
       aux += mixedArr[i].length
     } else {
       aux += mixedArr[i]
     } */
   }
-  avg = aux / mixedArr.length
+  avg /= mixedArr.length
   return avg
 }
 
