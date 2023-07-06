@@ -105,11 +105,12 @@ function avg(mixedArr) {
     return null
   }
   for (let i = 0; i < mixedArr.length; i++) {
-    if (typeof mixedArr[i] == "string") {
+    typeof mixedArr[i] == "string" ? aux += mixedArr[i].length : aux += mixedArr[i]
+    /* if (typeof mixedArr[i] == "string") {
       aux += mixedArr[i].length
     } else {
       aux += mixedArr[i]
-    }
+    } */
   }
   avg = aux / mixedArr.length
   return avg
